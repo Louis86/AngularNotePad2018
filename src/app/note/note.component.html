@@ -1,0 +1,37 @@
+<div *ngIf="editerNote" >
+
+<form >
+  <div class="form-group">
+    <label>Title</label>
+    <input value="{{editNote.title}}" #titleNomMod type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Content</label>
+    <textarea value="{{editNote.content}}" #contentNomMod class="form-control" rows="5"></textarea >
+  </div>
+  <div class="form-group">
+    <label>Category</label>
+    <select class="form-control" #categ required>
+      <option *ngFor = "let allC of categories">{{ allC.libelle  }} </option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="modifierNote(titleNomMod.value, contentNomMod.value, categ.value);">Modifier</button>
+</form>
+<br>
+</div>
+
+<div class="panel panel-default" *ngFor = "let not of notes">
+  <div class="panel-heading">
+    <h3 class="card-title">{{not.title}}</h3>
+    <h4 class="card-title">{{not.categorie.libelle}} - {{not.date.timestamp* 1000|date: 'dd/MM/yyyy'}}</h4>
+  </div>
+  <div class="panel-body">
+    <p class="card-text">{{not.content}}</p>
+    <div class="btn-group" >
+      <button type="button" class="btn btn-primary" (click)="edNote(not)">Modifier</button>
+      <button type="button" class="btn btn-danger" (click)="supprimeNote(not)">Supprimer</button>
+    </div>
+  </div>
+</div>
+
+

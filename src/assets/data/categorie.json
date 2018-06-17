@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "libelle": "Cuisine"
+  },
+  {
+    "id": 4,
+    "libelle": "Musique"
+  },
+  {
+    "id": 5,
+    "libelle": "Musique"
+  },
+  {
+    "id": 6,
+    "libelle": "Musique"
+  },
+  {
+    "id": 7,
+    "libelle": "Musique"
+  },
+  {
+    "id": 8,
+    "libelle": "Musique"
+  },
+  {
+    "id": 9,
+    "libelle": "Musique"
+  },
+  {
+    "id": 10,
+    "libelle": "Bibliotheque"
+  },
+  {
+    "id": 11,
+    "libelle": "Cuisines"
+  },
+  {
+    "id": 12,
+    "libelle": "Cuisines"
+  }
+]

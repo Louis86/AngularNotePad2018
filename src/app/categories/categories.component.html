@@ -1,0 +1,28 @@
+<h1>Liste des categories</h1>
+
+<div *ngIf="editer" >
+  <label>Libelle :
+    <input  value="{{catedit.libelle}}" #libelleNomMod/>
+  </label>
+  <button (click)="modifierCategorie(libelleNomMod.value);" >Modifier</button>
+</div>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Libelle</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let categorie of categories">
+    <th scope="row">{{categorie.id}}</th>
+    <td>{{ categorie.libelle }}</td>
+    <td><a type="button" class="btn btn-success" (click)="editCat(categorie)">Modifier</a></td>
+    <td><button class="btn btn-danger"  (click)="supprimerCategorie(categorie.id)">Supprimer</button></td>
+  </tr>
+  </tbody>
+</table>
+<br/>
